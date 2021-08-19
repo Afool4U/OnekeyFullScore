@@ -1,4 +1,4 @@
-# !/usr/bin/env pythonw
+# !/usr/bin/env python
 # -*-coding:utf-8 -*-
 
 """
@@ -131,10 +131,13 @@ def print_answers_to_list(patterns, questions):  # 输出答案到列表
         for question, answer in questions.items():
             if T in question:  # 假如匹配到了题目  --↘
                 answers.append('{:<4}{}\n'.format(num, answer))  # 则输出答案
-                if num % 5 == 0:
-                    answers.append('\n')
                 num += 1
                 break
+        else:
+            answers.append('{:<4}{}\n'.format(num, '无'))
+            num += 1
+        if (num - 1) % 5 == 0:
+            answers.append('\n')
     return answers
 
 
