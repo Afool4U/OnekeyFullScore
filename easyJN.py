@@ -166,4 +166,4 @@ if __name__ == '__main__':
     text.configure(state='disabled')
     text.pack()
     _thread.start_new_thread(read_problems, (text,))  # 启动监测线程
-    root.mainloop()  # 进入主消息循环
+    root.mainloop()  # 进入主消息循环 
